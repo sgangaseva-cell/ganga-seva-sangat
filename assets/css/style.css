@@ -224,6 +224,40 @@ h2.head .en{display:block;font-family:var(--font-en);color:var(--ink-faint);font
 .story-meta .ic{width:1.4em;flex:none}
 .story-body h4{font-family:var(--font-hindi);font-weight:400;font-size:1.15rem;color:var(--maroon)}
 
+/* ---------- COLLABORATION NETWORK ---------- */
+.collab-group{margin-top:48px}
+.collab-group:first-child{margin-top:0}
+.collab-group-head{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+.collab-group-head::after{content:"";flex:1;height:1px;background:var(--line)}
+.collab-group-head h3{font-family:var(--font-hindi);font-weight:400;font-size:1.28rem;color:var(--maroon);white-space:nowrap}
+.collab-group-head h3 .collab-en{display:block;font-family:var(--font-en);font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint);margin-top:4px;font-weight:600}
+.collab-num{width:38px;height:38px;border-radius:50%;background:var(--paper);border:1.5px solid var(--maroon);color:var(--maroon);display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:.82rem;flex:none}
+
+.collab-kitchen-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.collab-card{background:var(--paper);border:1px solid var(--line-soft);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);transition:.3s}
+.collab-card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px)}
+.collab-card-media{aspect-ratio:3/2;background:var(--paper-2);overflow:hidden}
+.collab-card-media img{width:100%;height:100%;object-fit:contain;padding:10px}
+.collab-card-body{padding:22px 22px 24px}
+.collab-card-body h4{font-family:var(--font-hindi);font-weight:400;font-size:1.15rem;color:var(--maroon);margin-bottom:8px}
+.collab-card-body p{color:var(--ink-soft);font-size:.92rem}
+.collab-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.collab-tags li{font-size:.76rem;font-weight:700;padding:.35em .85em;border-radius:999px;background:rgba(15,92,85,.09);color:var(--teal);border:1px solid rgba(15,92,85,.16)}
+.collab-contact{margin-top:16px;font-size:.9rem;display:flex;align-items:center;gap:8px;color:var(--ink-soft)}
+.collab-contact .ic{color:var(--gold)}
+.collab-contact a{font-weight:700;color:var(--maroon)}
+.collab-view-btn{margin-top:16px;font-size:.8rem;padding:.7em 1.4em}
+
+.collab-hotel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.collab-info-card{background:var(--paper);border:1px solid var(--line-soft);border-radius:var(--radius);padding:28px 26px}
+.collab-info-card h4{font-family:var(--font-hindi);font-weight:400;color:var(--maroon);font-size:1.2rem;margin-bottom:12px}
+.collab-addr{display:flex;align-items:baseline;gap:8px;color:var(--ink-soft);font-size:.92rem}
+.collab-addr .ic{color:var(--gold);flex:none}
+.collab-note{font-size:.84rem;color:var(--ink-faint);margin-top:10px;display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
+.collab-note a{color:var(--maroon);font-weight:700}
+.collab-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.collab-actions .btn{font-size:.8rem;padding:.7em 1.4em}
+
 /* ---------- PREMIUM GALLERY (documentary, varied sizes) ---------- */
 .gallery-masonry{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:14px;grid-auto-flow:dense;gap:14px;margin-top:44px}
 .gal-item{position:relative;border-radius:var(--radius-sm);overflow:hidden;background:var(--paper-2);box-shadow:var(--shadow-sm);grid-column:span 3;grid-row:span 20}
