@@ -263,6 +263,26 @@
     });
   }
 
+  // ==================================================================
+  // ---- COLLABORATION NETWORK: reuses the shared lightbox above ----
+  // ==================================================================
+  var COLLAB_GALLERIES = {
+    'taste-of-kashi': [
+      { src: './assets/img/collaboration/taste-of-kashi.jpg', alt: 'The Taste of Kashi — Bhandhara Food Rate List', cap: 'Taste of Kashi — भंडारा दर सूची' },
+      { src: './assets/img/collaboration/bhandara-action.jpg', alt: 'Ghat-side bhandara seva in progress', cap: 'घाट पर भंडारा सेवा — वास्तविक क्षण' }
+    ],
+    'laxmi-bhawan': [
+      { src: './assets/img/collaboration/laxmi-bhawan-pool.jpg', alt: 'Laxmi Bhawan Resort, Vindhyachal', cap: 'Laxmi Bhawan — विंध्याचल' },
+      { src: './assets/img/collaboration/ghat-family-namaste.jpg', alt: 'Ghat par sangat ka anubhav', cap: 'घाट पर सेवा का अनुभव — Laxmi Bhawan परिवार' }
+    ]
+  };
+  document.querySelectorAll('[data-collab-gallery]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var gallery = COLLAB_GALLERIES[btn.getAttribute('data-collab-gallery')];
+      if (gallery) openLightbox(gallery, 0, btn);
+    });
+  });
+
   // Touch swipe (mobile) — next/prev within lightbox
   if (lbStage) {
     var touchStartX = 0, touchEndX = 0;
