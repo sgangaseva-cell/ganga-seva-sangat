@@ -1,45 +1,16 @@
-import { Hono } from 'hono'
+name = "ganga-seva-sangat"
+main = "src/index.ts"
+compatibility_date = "2026-09-05"
 
-type Bindings = {
-  DB: D1Database
-  ADMIN_PASSWORD?: string
-}
+[assets]
+directory = "./public"
+binding = "ASSETS"
 
-const app = new Hono<{ Bindings: Bindings }>()
+[[d1_databases]]
+binding = "DB"
+database_name = "gss_core_circle_alerts"
+migrations_dir = "db/migrations"
+database_id = "59f4d1ce-c60e-494a-9cbe-88db4e959361"
 
-// Home Page Dashboard
-app.get('/', (c) => {
-  return c.html(`
-    <!DOCTYPE html>
-    <html lang="hi">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>GSS Core Circle Alert System</title>
-      <style>
-        body { font-family: sans-serif; background: #f4f6f8; margin: 0; padding: 20px; text-align: center; }
-        .card { background: white; padding: 25px; border-radius: 12px; max-width: 450px; margin: 40px auto; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        h2 { color: #d97706; margin-bottom: 5px; }
-        .status { color: #16a34a; font-weight: bold; margin: 15px 0; }
-        .btn { display: inline-block; width: 100%; padding: 12px; margin-top: 15px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; color: white; background: #2563eb; text-decoration: none; box-sizing: border-box; }
-      </style>
-    </head>
-    <body>
-      <div class="card">
-        <h2>🚩 Ganga Seva Sangat</h2>
-        <p><b>Core Circle Emergency Alert System</b></p>
-        <hr/>
-        <p class="status">🟢 System Online & Active</p>
-        <a href="/api/status" class="btn">Check Status API</a>
-      </div>
-    </body>
-    </html>
-  `)
-})
-
-// Status Endpoint
-app.get('/api/status', (c) => {
-  return c.json({ status: 'active', system: 'Ganga Seva Sangat', timestamp: new Date().toISOString() })
-})
-
-export default app
+[vars]
+APP_ORIGIN = "https://alert.gangasevasangat.com"
