@@ -10,7 +10,7 @@ binding = "ASSETS"
 binding = "DB"
 database_name = "gss_core_circle_alerts"
 migrations_dir = "db/migrations"
-database_id = "YAHA_APNI_REAL_DATABASE_ID_DAALO"
+database_id = "59f4d9ce-c00e-494a-9cbe-88db4e999361"
 
 [vars]
 APP_ORIGIN = "https://app.gangasevasangat.com"
