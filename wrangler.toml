@@ -13,4 +13,4 @@ migrations_dir = "db/migrations"
 database_id = "59f4d9ce-c00e-494a-9cbe-88db4e999361"
 
 [vars]
-APP_ORIGIN = "https://app.gangasevasangat.com"
+APP_ORIGIN = "https://alert.gangasevasangat.com"
