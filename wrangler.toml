@@ -2,10 +2,6 @@ name = "ganga-seva-sangat"
 main = "src/index.ts"
 compatibility_date = "2026-09-05"
 
-[assets]
-directory = "./public"
-binding = "ASSETS"
-
 [[d1_databases]]
 binding = "DB"
 database_name = "gss_core_circle_alerts"
