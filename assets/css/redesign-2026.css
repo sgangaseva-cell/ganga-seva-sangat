@@ -1,0 +1,43 @@
+/* GSS TRUST REDESIGN LAYER — 2026-11-23
+   Additive visual system; preserves the existing V3 stylesheet and all legacy components.
+*/
+:root{--gss-paper:#fffdf8;--gss-saffron:#d47a36;--gss-gold:#d8b66b;--gss-teal:#12665f;--gss-radius:22px}
+body{background:var(--gss-paper)}
+.topbar{letter-spacing:.015em}
+.site-header{backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 8px 28px rgba(12,18,28,.08)}
+.site-header .nav{min-height:78px}
+.brand .mark{border-radius:50%;overflow:hidden;box-shadow:0 0 0 2px rgba(216,182,107,.55),0 6px 20px rgba(0,0,0,.16)}
+.nav-links a{transition:color .2s ease,opacity .2s ease}
+.nav-links a:hover{color:var(--gss-saffron)}
+.nav-cta,.hero-cta .btn,.btn{transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+.nav-cta:hover,.hero-cta .btn:hover,.btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(14,32,40,.16)}
+.hero{isolation:isolate}
+.hero-media img,.hero-media video{filter:saturate(.9) contrast(1.04)}
+.hero-scrim{background:linear-gradient(90deg,rgba(7,10,19,.82),rgba(7,10,19,.38) 58%,rgba(7,10,19,.12)),linear-gradient(0deg,rgba(7,10,19,.48),transparent 55%)}
+.hero-content{max-width:780px}
+.hero-content h1{text-wrap:balance;line-height:1.22}
+.hero-content .support{max-width:650px}
+.section{scroll-margin-top:96px}
+.center .lede{max-width:760px;margin-inline:auto}
+.about-grid,.field-report,.gov-grid,.contact-grid{align-items:stretch}
+.field-report{overflow:hidden;border:1px solid rgba(35,30,23,.1);box-shadow:0 22px 60px rgba(18,12,5,.09)}
+.field-report .fr-media img{height:100%;min-height:340px;object-fit:cover}
+.fr-body{padding:clamp(24px,4vw,46px)}
+.fr-tags{display:flex;flex-wrap:wrap;gap:8px}
+.fr-tag{border-radius:999px;padding:6px 12px;background:rgba(18,102,95,.09);color:var(--gss-teal);font-weight:700}
+.seva-card,.collab-card,.story-card,.trustee-card,.gov-card,.support-way,.info-card{transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;border-radius:var(--gss-radius)}
+.seva-card:hover,.collab-card:hover,.story-card:hover,.trustee-card:hover,.gov-card:hover,.support-way:hover,.info-card:hover{transform:translateY(-3px);box-shadow:0 16px 38px rgba(18,12,5,.1)}
+.gallery-masonry .gal-item{border-radius:16px;overflow:hidden}
+.gallery-masonry img{transition:transform .45s ease}
+.gallery-masonry .gal-item:hover img{transform:scale(1.035)}
+.trustee-photo img{object-fit:cover}
+.notice{border-radius:16px}
+.contact-grid .info-card{height:100%}
+.footer{background:linear-gradient(145deg,#0a0d1a,#171a2b 70%,#2b1b1b)}
+.assist-cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid rgba(216,182,107,.55);border-radius:999px;padding:11px 18px;background:rgba(18,102,95,.1);color:var(--gss-teal);font-weight:800}
+.assist-cta:hover{background:var(--gss-teal);color:#fff}
+.assist-strip{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:22px 26px;margin:28px auto 0;border:1px solid rgba(18,102,95,.18);border-radius:20px;background:linear-gradient(120deg,rgba(18,102,95,.08),rgba(216,182,107,.13))}
+.assist-strip p{margin:0}
+.assist-strip strong{display:block;font-size:1.12rem}
+@media(max-width:760px){.site-header .nav{min-height:68px}.hero-content{padding-inline:22px}.hero-content h1{font-size:clamp(2.1rem,9vw,3.5rem)}.field-report .fr-media img{min-height:230px;max-height:320px}.assist-strip{align-items:flex-start;flex-direction:column;padding:20px}.assist-strip .assist-cta{width:100%}}
+@media(prefers-reduced-motion:reduce){.seva-card,.collab-card,.story-card,.trustee-card,.gov-card,.support-way,.info-card,.gallery-masonry img{transition:none}}
