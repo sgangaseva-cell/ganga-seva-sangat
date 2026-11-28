@@ -10,7 +10,7 @@ shares no code, config, or build pipeline with it.
 | Item | Value |
 |---|---|
 | Worker | `gss-main-joining-api` |
-| URL | https://gss-main-joining-api.sgangasevasangat.workers.dev |
+| URL | https://gss-main-joining-api.sgangaseva.workers.dev |
 | D1 database | `gss-main-joining-db` |
 | D1 ID | `5ef00ef2-aee1-4f4f-a7ad-280ba24bb38a` |
 | D1 binding | `DB` |
