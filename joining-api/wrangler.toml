@@ -1,0 +1,23 @@
+# Joining Form backend — isolated from the main website Worker.
+#
+# Deployed ONLY from this directory (joining-api/).
+# Served at: https://gss-main-joining-api.sgangasevasangat.workers.dev
+#
+# Do NOT add `routes` or custom domains here. This Worker is intentionally
+# reachable only on its workers.dev hostname; the frontend calls it cross-origin
+# and CORS is enforced in src/worker.js.
+
+name = "gss-main-joining-api"
+main = "src/worker.js"
+compatibility_date = "2026-11-27"
+workers_dev = true
+
+# Existing production database. Do not change this ID.
+[[d1_databases]]
+binding = "DB"
+database_name = "gss-main-joining-db"
+database_id = "5ef00ef2-aee1-4f4f-a7ad-280ba24bb38a"
+
+# RATE_LIMIT_SALT is intentionally NOT declared here.
+# It is a runtime secret set via `wrangler secret put RATE_LIMIT_SALT`
+# (or the dashboard). Secrets survive `wrangler deploy`; vars do not.
