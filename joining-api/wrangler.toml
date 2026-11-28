@@ -1,7 +1,7 @@
 # Joining Form backend — isolated from the main website Worker.
 #
 # Deployed ONLY from this directory (joining-api/).
-# Served at: https://gss-main-joining-api.sgangasevasangat.workers.dev
+# Served at: https://gss-main-joining-api.sgangaseva.workers.dev
 #
 # Do NOT add `routes` or custom domains here. This Worker is intentionally
 # reachable only on its workers.dev hostname; the frontend calls it cross-origin
